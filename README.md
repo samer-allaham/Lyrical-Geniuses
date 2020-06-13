@@ -2,8 +2,8 @@
 
 ## Creators:
 
-Samer Allaham
-Bashar Alasmar
+- Samer Allaham
+- Bashar Alasmar
 
 ## description:
 
