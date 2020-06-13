@@ -477,131 +477,131 @@ from colorama import Style
 #         print()
 #         print('are you drunk?') 
 
-from itertools import groupby
-import random
+# from itertools import groupby
+# import random
 
-string='''samer mohammed allaham
-samer mohammed allaham
-samer mohammed allaham
-samer mohammed allaham
-samer mohammed allaham
-samer mohammed allaham
-samer mohammed allaham
-samer mohammed allaham
-samer mohammed allaham
-samer mohammed allaham
-samer mohammed allaham
-samer mohammed allaham
-samer mohammed allaham
-
-
-samer mohammed allaham
-samer mohammed allaham
+# string='''samer mohammed allaham
+# samer mohammed allaham
+# samer mohammed allaham
+# samer mohammed allaham
+# samer mohammed allaham
+# samer mohammed allaham
+# samer mohammed allaham
+# samer mohammed allaham
+# samer mohammed allaham
+# samer mohammed allaham
+# samer mohammed allaham
+# samer mohammed allaham
+# samer mohammed allaham
 
 
-samer mohammed allaham
-samer mohammed allaham samer mohammed allaham samer mohammed allaham
+# samer mohammed allaham
+# samer mohammed allaham
 
 
-samer mohammed allaham
-samer mohammed allaham
-samer mohammed allaham
-'''
-li = string.splitlines() 
-
-# calculates the keys for each element present in iterable. It returns key and iterable of grouped items.
-res = [list(sub) for ele, sub in groupby(li, key = bool) if ele]
-
-random_lyric=random.choice(res)
-
-print('\nrandooooom lyric',random_lyric)
-
-separator = ', '
-
-full_text=separator.join(random_lyric)
-
-print('\nfulllll text',full_text)
+# samer mohammed allaham
+# samer mohammed allaham samer mohammed allaham samer mohammed allaham
 
 
-full_text_list=[]
+# samer mohammed allaham
+# samer mohammed allaham
+# samer mohammed allaham
+# '''
+# li = string.splitlines() 
 
-full_text_list.append(full_text.split())
+# # calculates the keys for each element present in iterable. It returns key and iterable of grouped items.
+# res = [list(sub) for ele, sub in groupby(li, key = bool) if ele]
 
-full_text_list = [item.replace(",","") for item in full_text_list[0]]
+# random_lyric=random.choice(res)
 
-print('\nfullltexxxt list',full_text_list)
+# print('\nrandooooom lyric',random_lyric)
+
+# separator = ', '
+
+# full_text=separator.join(random_lyric)
+
+# print('\nfulllll text',full_text)
+
+
+# full_text_list=[]
+
+# full_text_list.append(full_text.split())
+
+# full_text_list = [item.replace(",","") for item in full_text_list[0]]
+
+# print('\nfullltexxxt list',full_text_list)
 
 
 # print('reeeeess',res)
  
 
-random_from_list=[]
-indexs=[]
+# random_from_list=[]
+# indexs=[]
 
-l = [len(element) for element in li] 
+# l = [len(element) for element in li] 
 
-# ask for defficulty based on input it changes the range of words 
+# # ask for defficulty based on input it changes the range of words 
 
 
-for item in range(4):
+# for item in range(4):
 
-    x=random.choice(full_text_list)
+#     x=random.choice(full_text_list)
 
-    while x=='{ }' :
-        print('printing xxx111111',x)
-        x=random.choice(full_text_list)
-        if x!='{ }':
-            print('printing xxx2222222',x)
-            break
-        else:
-            continue
+#     while x=='{ }' :
+#         print('printing xxx111111',x)
+#         x=random.choice(full_text_list)
+#         if x!='{ }':
+#             print('printing xxx2222222',x)
+#             break
+#         else:
+#             continue
 
-    print('afterrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr')
+#     print('afterrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr')
     
 
     
-    if x not in random_from_list:
-        try:
+#     if x not in random_from_list:
+#         try:
         
-            random_from_list.append(x)
+#             random_from_list.append(x)
 
-            print('insideee if checkng random',full_text_list.index(random_from_list[item]))
-            # change words to '{ }' based on index
-            print(random_from_list[item])
-            indexs.append(full_text_list.index(random_from_list[item]))
-            full_text_list[indexs[item]]='{ }'
+#             print('insideee if checkng random',full_text_list.index(random_from_list[item]))
+#             # change words to '{ }' based on index
+#             print(random_from_list[item])
+#             indexs.append(full_text_list.index(random_from_list[item]))
+#             full_text_list[indexs[item]]='{ }'
 
-        except IndexError:
-            print('woops')
+#         except IndexError:
+#             print('woops')
 
     
         
 
-full_text_list = [item.lower() for item in full_text_list]
-separator = ' '
-full_text_list=separator.join(full_text_list)
+# full_text_list = [item.lower() for item in full_text_list]
+# separator = ' '
+# full_text_list=separator.join(full_text_list)
 
 
 
-answers=[]
-for item in random_from_list:
-    answers.append(item)
+# answers=[]
+# for item in random_from_list:
+#     answers.append(item)
 
 
-for item  in range(4):
-    question=input('Guess the word: ')
+# for item  in range(4):
+#     question=input('Guess the word: ')
 
-    question =question.replace(" ", "")
-    # out_of+=100
+#     question =question.replace(" ", "")
+#     # out_of+=100
 
-    if question in  random_from_list:
-        # score+=100
-        print(colored(f'\nGood job,your score is\n','green'))
+#     if question in  random_from_list:
+#         # score+=100
+#         print(colored(f'\nGood job,your score is\n','green'))
 
 
-        random_from_list.remove(question)
-    else:
-        print(colored(f'\nWrong answer, score is \n','red'))
+#         random_from_list.remove(question)
+#     else:
+#         print(colored(f'\nWrong answer, score is \n','red'))
 
-print(random_from_list)
-# full_text_list = full_text_list.replace('{ }', termcolor.colored('{ }', 'red'))
+# print(random_from_list)
+# # full_text_list = full_text_list.replace('{ }', termcolor.colored('{ }', 'red'))
